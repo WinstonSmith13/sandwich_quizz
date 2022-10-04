@@ -2,7 +2,7 @@
 
 
 foreach ($data as $fiche){?>
-
+<div class="">
     <ul class="list-group">
   <li class="list-group-item disabled"><?= $fiche->question;?> ?</li>
         <ol type="a" >
@@ -14,6 +14,7 @@ foreach ($data as $fiche){?>
         </ol>
 
 </ul>
+</div>
 
 <?php
 }?>
