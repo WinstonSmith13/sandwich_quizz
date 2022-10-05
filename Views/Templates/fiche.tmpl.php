@@ -1,20 +1,33 @@
+
+<!--<div id="affichage_score"> Taux de réussite: 0% </div>-->
+<div id="container_fiche">
+
+
+
 <?php
 
 
-foreach ($data as $fiche){?>
-<div class="">
-    <ul class="list-group">
-  <li class="list-group-item disabled"><?= $fiche->question;?> ?</li>
-        <ol type="a" >
-    <?php foreach ($fiche->answers as $answer){ ?>
+foreach ($data as $fiche) {
+?>
+    <div id="container_questions" class="d-none">
+        <div class="question">
+                <div class="affichage_question"> <?= $fiche->question; ?> ?</div>
+                    <div class="answers">
+                        <?php foreach ($fiche->answers as $answer) { ?>
 
-        <li ><?= $answer['answer'] ?> </li>
+                            <div class="answer">
+                                <?= $answer['answer'] ?>
+                            </div>
 
-            <?php } ?>
-        </ol>
+                        <?php } ?>
 
-</ul>
+                    </div>
+                    <div class="question_feedback"> </div>
+        </div>
+
+    <?php
+} ?>
+
+
+    </div>
 </div>
-
-<?php
-}?>

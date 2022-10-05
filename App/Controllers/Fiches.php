@@ -28,9 +28,13 @@ class fiche extends Controller
         foreach ($questions as $question){
 
             $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
-
-
         }
+        ?>
+        <script>
+    let data = <?php echo json_encode(['success' => true, 'content' => $data]) ?>
+      </script>
+
+        <?php
 
         return $this->render('layouts.default','templates.fiche', $data);
     }

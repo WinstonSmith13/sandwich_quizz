@@ -1,12 +1,8 @@
-
+<!--
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="https://www.sandwich-quizz.org/">
-                <!-- Affichage du logo -->
-                <?php
-                $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers-2.svg');
-                echo $svg;
-                ?>
+
 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,6 +22,19 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav>-->
 
+<nav class="grey lighten ">
+    <div class="nav-wrapper ">
+        <a href="/" ><?php
+            $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers-2.svg');
+            echo $svg;
+            ?></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+    </div>
+</nav>
 
