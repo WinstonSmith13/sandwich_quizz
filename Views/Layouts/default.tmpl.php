@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/Css/style_footer.css">
     <link rel="stylesheet" href="/Css/style_fiche.css">
     <link rel="stylesheet" href="/Css/style_question.css">
+    <link rel="stylesheet" href="/scss/style_resultat.scss">
 
 </head>
 <body>

@@ -29,6 +29,7 @@ class fiche extends Controller
 
             $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
         }
+
         ?>
         <script>
     let data = <?php echo json_encode(['success' => true, 'content' => $data]) ?>
@@ -45,6 +46,24 @@ class fiche extends Controller
     {
         // Transmission des annonce à la vue (Layout + template).
         return $this->render('layouts.default','templates.fiche');
+    }
+
+    public function dataAnswerCheck(): array|string
+    {
+
+        // Exécution de la requête
+        $questionsCheck = PdoDb::getInstance()->request('*', 'question', false, '', '', true, 'RAND()', 'DESC', true, 6);
+        // Transmission des annonce à la vue (Layout + template).
+        $data = array();
+
+        foreach ($questionsCheck as $question){
+
+            $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
+        }
+
+
+        echo json_encode(['success' => true, 'content' => $questionsCheck]);
+        return $questionsCheck;
     }
 
 

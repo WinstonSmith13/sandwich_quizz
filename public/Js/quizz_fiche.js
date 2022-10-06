@@ -3,6 +3,18 @@ window.onload = () => {
     /* Maintenant que l'on a les informations du site il faut pouvoir savoir où l'on clique et comparer */
 
 
+
+
+
+       /* fetch('/?answer')
+            .then((response) =>{return response.json()} )
+            .then((answer) =>
+
+                console.log(data.content) )*/
+
+
+
+
     if (data.success === true) {
         let i = 0;
 

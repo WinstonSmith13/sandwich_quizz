@@ -35,6 +35,11 @@ if(!empty($_GET)) {
         echo $affResultat->displayResultat();
         exit();
     }
+    if (isset($_GET['answer'])) {
+        $fiche = new fiche();
+        echo $fiche-> dataAnswerCheck();
+        exit();
+    }
 }
 
 
