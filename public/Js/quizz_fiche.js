@@ -6,28 +6,19 @@ window.onload = () => {
 
  if (data.success === true) {
      let i = 0;
-    let questionsAffichage = document.querySelector('[data-id = "' + i +'"]');
+
     const answerButton = document.querySelectorAll('.answer');
     const selectionScore = document.querySelector('#affichage_score');
-    const selectionQuestionCard = document.querySelector('.question')
+    let selectionQuestion = document.querySelector('#container_questions' + i);
+
+     selectionQuestion.classList.remove('d-none');
 
 
-     questionsAffichage.classList.remove("d-none")
 
 
-    function nextQuestion(){
-
-        /*for (let i=0; i < 6; i++) { }*/
 
 
-            questionsAffichage.classList.add('d-none');
-            i++;
-        questionsAffichage.classList.remove('d-none');
-            console.log(questionsAffichage);
-            /*questionsAffichage.classList.remove("d-none");*/
 
-
-    }
 
 
 
@@ -37,10 +28,15 @@ window.onload = () => {
 
 let score = 0;
 
-
-
     answerButton.forEach(answer => {
         answer.addEventListener('click', () =>{
+
+            document.querySelector('#container_questions' + i).classList.add("d-none");
+            i++;
+            document.querySelector('#container_questions' + i).classList.remove('d-none');
+
+
+
             for (const element of data.content) {
                 for (const answers of element.answers) {
 
@@ -51,16 +47,14 @@ let score = 0;
                         let affichageScore = `<div class="affichage_score">Taux de réussite: ${Math.round(score*100/6)} %</div>`
                         selectionScore.innerHTML = affichageScore;
 
-                        nextQuestion()
-
-
                     }
-
                 }
             }
 
 
+
         })
+
         })
 
 }}
