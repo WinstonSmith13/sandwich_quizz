@@ -10,13 +10,13 @@ foreach ($data as $fiche) {
 
 
 ?>
-    <div id="container_questions<?= $i;?>"  class="container_question hide" >
-        <div class="question">
-                <div class="affichage_question"> <?= $fiche->question; ?> ?</div>
+    <div id="container_questions<?= $i;?>"  class="container_question d-none mt-5" >
+        <div class="question ">
+                <div class="affichage_question "> <?= $fiche->question; ?> ?</div>
                     <div class="answers">
                         <?php foreach ($fiche->answers as $answer) {?>
 
-                            <div class="answer" data-id="<?= $answer['id']?>">
+                            <div class="answer " data-id="<?= $answer['id']?>">
                                 <?= $answer['answer'] ?>
                             </div>
 

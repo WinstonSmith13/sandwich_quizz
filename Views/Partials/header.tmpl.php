@@ -24,17 +24,28 @@
     </div>
 </nav>-->
 
-<nav class="grey lighten ">
-    <div class="nav-wrapper ">
-        <a href="/" ><?php
-            $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers-2.svg');
-            echo $svg;
-            ?></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#"><a href="/" ><?php
+                    $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers-2.svg');
+                    echo $svg;
+                    ?></a></a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">HighScore</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
     </div>
 </nav>
+
+
 

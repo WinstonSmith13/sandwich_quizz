@@ -6,6 +6,7 @@
  * qui  définissent la logique de l'application puis génèrerent les affichages.
  */
 use SYRADEV\AutoEncheres\Controllers\fiche;
+use SYRADEV\AutoEncheres\Controllers\Resultat;
 
 // On démarre le moteur de sessions PHP pour gérer les variables de $_SESSION.
 session_start();
@@ -27,6 +28,11 @@ if(!empty($_GET)) {
     if (isset($_GET['jeu'])) {
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
+        exit();
+    }
+    if (isset($_GET['resultat'])) {
+        $affResultat = new Resultat();
+        echo $affResultat->displayResultat();
         exit();
     }
 }
