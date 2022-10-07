@@ -1,21 +1,30 @@
+
+
+
 window.onload = () => {
 
-    /* Maintenant que l'on a les informations du site il faut pouvoir savoir où l'on clique et comparer */
 
 
 
+    var responseClone; // 1
+    fetch('/?answer')
+        .then(function (response) {
+            responseClone = response.clone(); // 2
+            return response.json();
+        })
+        .then(function (data) {
+            // Do something with data
+        }, function (rejectionReason) { // 3
+            console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
+            responseClone.text() // 5
+                .then(function (bodyText) {
+                    console.log('Received the following instead of valid JSON:', bodyText); // 6
+                });
+        });
 
 
-       /* fetch('/?answer')
-            .then((response) =>{return response.json()} )
-            .then((answer) =>
 
-                console.log(data.content) )*/
-
-
-
-
-    if (data.success === true) {
+    /*if (data.success === true) {*/
         let i = 0;
 
         const answerButton = document.querySelectorAll('.answer');
@@ -35,10 +44,10 @@ window.onload = () => {
                     document.querySelector('#container_questions' + i).classList.remove('d-none');
 
 
-                    for (const element of data.content) {
+                   /* for (const element of data.content) {
                         for (const answers of element.answers) {
-
-                            let id_answer = answers.id
+*/
+                            /*let id_answer = answers.id
                             let answer_check = answers.answer_check
                             if (answer.dataset.id == id_answer && answer_check == 1) {
                                 score++
@@ -48,8 +57,8 @@ window.onload = () => {
                                 selectionScore.innerHTML = affichageScore;
 
                             }
-                        }
-                    }
+                        }*/
+                   /* }*/
                 }
                 else {
                     window.location.replace("/?resultat")
@@ -58,6 +67,6 @@ window.onload = () => {
 
             })
         })
-    }
+    /*}*/
 }
 

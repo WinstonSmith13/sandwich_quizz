@@ -10,6 +10,7 @@ foreach ($data as $fiche) {
 
 
 ?>
+
     <div id="container_questions<?= $i;?>"  class="container_question d-none mt-5" >
         <div class="question ">
                 <div class="affichage_question "> <?= $fiche->question; ?> ?</div>

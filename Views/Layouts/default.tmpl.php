@@ -28,6 +28,8 @@ require_once(__DIR__ . '/../../Views/Partials/footer.tmpl.php');
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 <script src="/Js/nav.js"></script>
-<script src="/Js/quizz_fiche.js"></script>
+<script type="module" src="/Js/quizz_fiche.js"></script>
+
+
 </body>
 </html>

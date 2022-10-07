@@ -6,10 +6,10 @@ use PDO, PDOException;
 
 class PdoDb {
 
-    private static $connect = null;
-    private PDO $conx;
+    public static $connect = null;
+    public PDO $conx;
 
-    private function __construct() {
+    public function __construct() {
 
         global $conf;
 

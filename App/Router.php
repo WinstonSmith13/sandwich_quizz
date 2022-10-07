@@ -7,6 +7,8 @@
  */
 use SYRADEV\AutoEncheres\Controllers\fiche;
 use SYRADEV\AutoEncheres\Controllers\Resultat;
+use \SYRADEV\AutoEncheres\Controllers\dataAnswer;
+
 
 // On démarre le moteur de sessions PHP pour gérer les variables de $_SESSION.
 session_start();
@@ -36,10 +38,11 @@ if(!empty($_GET)) {
         exit();
     }
     if (isset($_GET['answer'])) {
-        $fiche = new fiche();
-        echo $fiche-> dataAnswerCheck();
+        $answerJson = new dataAnswer();
+        echo $answerJson->dataAnswerCheck();
         exit();
     }
+
 }
 
 

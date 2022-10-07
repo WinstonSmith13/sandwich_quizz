@@ -30,13 +30,6 @@ class fiche extends Controller
             $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
         }
 
-        ?>
-        <script>
-    let data = <?php echo json_encode(['success' => true, 'content' => $data]) ?>
-      </script>
-
-        <?php
-
         return $this->render('layouts.default','templates.fiche', $data);
     }
 
@@ -48,10 +41,10 @@ class fiche extends Controller
         return $this->render('layouts.default','templates.fiche');
     }
 
-    public function dataAnswerCheck(): array|string
+   /* public function dataAnswerCheck(): array|string
     {
 
-        // Exécution de la requête
+         // Exécution de la requête
         $questionsCheck = PdoDb::getInstance()->request('*', 'question', false, '', '', true, 'RAND()', 'DESC', true, 6);
         // Transmission des annonce à la vue (Layout + template).
         $data = array();
@@ -62,9 +55,9 @@ class fiche extends Controller
         }
 
 
-        echo json_encode(['success' => true, 'content' => $questionsCheck]);
-        return $questionsCheck;
-    }
+
+        return $this->render('layouts.default','templates.fiche', $data);
+    }*/
 
 
 
