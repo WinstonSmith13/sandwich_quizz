@@ -45,18 +45,19 @@ class fiche extends Controller
     {
 
          // Exécution de la requête
-        $questionsCheck = PdoDb::getInstance()->request('*', 'question', false, '', '', true, 'RAND()', 'DESC', true, 6);
+        $answerCheck = PdoDb::getInstance()->request('answer_check', 'answer', false, '', '', false);
         // Transmission des annonce à la vue (Layout + template).
         $data = array();
 
-        foreach ($questionsCheck as $question){
+       /* foreach ($answerCheck as $answerC){
 
-            $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
-        }
+            $data[] = new FichesModel($ans, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
+        }*/
 
 
 
-        return $this->render('layouts.default','templates.fiche', $data);
+
+/*        return $data;
     }*/
 
 

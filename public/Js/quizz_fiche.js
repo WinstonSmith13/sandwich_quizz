@@ -4,26 +4,6 @@
 window.onload = () => {
 
 
-
-
-    var responseClone; // 1
-    fetch('/?answer')
-        .then(function (response) {
-            responseClone = response.clone(); // 2
-            return response.json();
-        })
-        .then(function (data) {
-            // Do something with data
-        }, function (rejectionReason) { // 3
-            console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
-            responseClone.text() // 5
-                .then(function (bodyText) {
-                    console.log('Received the following instead of valid JSON:', bodyText); // 6
-                });
-        });
-
-
-
     /*if (data.success === true) {*/
         let i = 0;
 
@@ -42,6 +22,7 @@ window.onload = () => {
                     document.querySelector('#container_questions' + i).classList.add("d-none");
                     i++;
                     document.querySelector('#container_questions' + i).classList.remove('d-none');
+console.log(answer.id)
 
 
                    /* for (const element of data.content) {

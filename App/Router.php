@@ -7,7 +7,7 @@
  */
 use SYRADEV\AutoEncheres\Controllers\fiche;
 use SYRADEV\AutoEncheres\Controllers\Resultat;
-use \SYRADEV\AutoEncheres\Controllers\dataAnswer;
+
 
 
 // On démarre le moteur de sessions PHP pour gérer les variables de $_SESSION.
@@ -18,7 +18,11 @@ session_start();
  * Gestion des appels avec POST.
  */
 if(!empty($_POST)) {
-
+    if (isset($_POST['email']) && isset($_POST['password'])) {
+        $user = new Auth();
+        echo $user->login($_POST['email'],$_POST['password']);
+        print_r($user);
+    }
 
 }
 
@@ -30,18 +34,18 @@ if(!empty($_GET)) {
     if (isset($_GET['jeu'])) {
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
-        exit();
     }
+
     if (isset($_GET['resultat'])) {
         $affResultat = new Resultat();
         echo $affResultat->displayResultat();
         exit();
     }
-    if (isset($_GET['answer'])) {
+    /*if (isset($_GET['answer'])) {
         $answerJson = new dataAnswer();
         echo $answerJson->dataAnswerCheck();
         exit();
-    }
+    }*/
 
 }
 
