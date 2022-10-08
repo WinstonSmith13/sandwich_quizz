@@ -6,10 +6,11 @@ window.onload = () => {
 
     /*if (data.success === true) {*/
         let i = 0;
+        let counterQuestion = 1;
 
         const answerButton = document.querySelectorAll('.answer');
-        const selectionScore = document.querySelector('#affichage_score');
         let selectionQuestion = document.querySelector('#container_questions' + i);
+        let counterQuestionAff = document.querySelector('.title');
 
         selectionQuestion.classList.remove('d-none');
 
@@ -18,11 +19,15 @@ window.onload = () => {
 
         answerButton.forEach(answer => {
             answer.addEventListener('click', () => {
+
                 if (i < 5) {
                     document.querySelector('#container_questions' + i).classList.add("d-none");
                     i++;
+                    counterQuestion++;
+                    counterQuestionAff.innerHTML = ` <span>${counterQuestion} sur 6 Questions</span>`;
                     document.querySelector('#container_questions' + i).classList.remove('d-none');
-console.log(answer.id)
+
+                    console.log("wesh");
 
 
                    /* for (const element of data.content) {

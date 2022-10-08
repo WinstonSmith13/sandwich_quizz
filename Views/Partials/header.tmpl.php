@@ -27,10 +27,10 @@
 <nav class="nav">
     <div class="container">
         <div class="logo">
-            <a href="#"><a href="/" ><?php
+           <a href="/" ><?php
                     $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers-2.svg');
                     echo $svg;
-                    ?></a></a>
+                    ?></a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">

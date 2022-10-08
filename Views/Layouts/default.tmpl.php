@@ -10,8 +10,9 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="/Css/style_nav.css">
     <link rel="stylesheet" href="/Css/style_footer.css">
-    <link rel="stylesheet" href="/Css/style_fiche.css">
-    <link rel="stylesheet" href="/Css/style_question.css">
+    <link rel="stylesheet" href="/Css/style.css">
+
+
     <link rel="stylesheet" href="/scss/style_resultat.scss">
 
 </head>
@@ -28,7 +29,7 @@ require_once(__DIR__ . '/../../Views/Partials/footer.tmpl.php');
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 <script src="/Js/nav.js"></script>
-<script type="module" src="/Js/quizz_fiche.js"></script>
+<script type="module" src="/Js/script_quizz.js"></script>
 
 
 </body>
