@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<?php $i = 0;
+ ?>
            <!-- <div class="d-flex justify-content-center">
                 <h1>Le quizz du SandwichQuizz</h1>
             </div>-->
@@ -18,18 +20,20 @@
                    <span>Règles du SandwichQuizz</span>
                </div>
                <div class="info_list">
-                   <div class="info">1. Une seule bonne réponse par question</div>
-                   <div class="info">2. 1 point par bonne réponse</div>
-                   <div class="info">3. Pas de perte de points si vous choisissez la mauvaise réponse</div>
+                   <div class="info"><span>1. </span>Une seule bonne réponse par question</div>
+                   <div class="info"><span>2. </span> Pas de perte de points si vous choisissez la mauvaise réponse</div>
                </div>
                <div class="buttons">
                    <a href="/?jeu"><button class="start">Commencer</button></a>
                </div>
            </div>
+<section id="container_questions<?= $i; ?>" class="d-none">
+</section>
 
 
 
-</div>
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

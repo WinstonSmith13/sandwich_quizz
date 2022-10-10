@@ -9,7 +9,8 @@ namespace SYRADEV\AutoEncheres\Controllers;
  */
 class Accueil extends Controller
 {
-    public function display() {
+    public function display(): array|string
+    {
         return $this->render('layouts.default','templates.accueil');
     }
 }

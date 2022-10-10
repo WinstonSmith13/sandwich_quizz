@@ -30,6 +30,7 @@ class fiche extends Controller
             $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
         }
 
+        $jsonData = json_encode($data);
         return $this->render('layouts.default','templates.fiche', $data);
     }
 
@@ -41,24 +42,37 @@ class fiche extends Controller
         return $this->render('layouts.default','templates.fiche');
     }
 
-   /* public function dataAnswerCheck(): array|string
+
+
+   public function answerCheck(): array|string
     {
 
-         // Exécution de la requête
-        $answerCheck = PdoDb::getInstance()->request('answer_check', 'answer', false, '', '', false);
+        // Exécution de la requête
+        $sql ='SELECT answer.answer_check, answer.id FROM answer'  ;
+
+        $answerCheck = PdoDb::getInstance()->requete($sql);
+
         // Transmission des annonce à la vue (Layout + template).
-        $data = array();
+        /*$data = array();
 
-       /* foreach ($answerCheck as $answerC){
+        foreach ($questionCheck as $question){
 
-            $data[] = new FichesModel($ans, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
+            $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], false));
+            $jsonData = json_encode($data);
         }*/
+        $jsonData = json_encode(['success' => true, 'content' => $answerCheck]);
 
 
+        ?>
+
+<!--<script>
+    let answerCheck = /*= $jsonData */;
+</script>-->
 
 
-/*        return $data;
-    }*/
+<?php
+        return $this->render('layouts.default','templates.fiche', $jsonData);
+    }
 
 
 

@@ -1,3 +1,7 @@
+
+<?php $i = 0;
+?>
+
 <div class="result_box">
     <div>
         <div class="icon">
@@ -17,3 +21,11 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+<section id="container_questions<?= $i; ?>" class="d-none">
+</section>

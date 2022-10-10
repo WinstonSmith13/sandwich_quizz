@@ -6,6 +6,7 @@
  * qui  définissent la logique de l'application puis génèrerent les affichages.
  */
 use SYRADEV\AutoEncheres\Controllers\fiche;
+use SYRADEV\AutoEncheres\Controllers\answer;
 use SYRADEV\AutoEncheres\Controllers\Resultat;
 
 
@@ -18,11 +19,7 @@ session_start();
  * Gestion des appels avec POST.
  */
 if(!empty($_POST)) {
-    if (isset($_POST['email']) && isset($_POST['password'])) {
-        $user = new Auth();
-        echo $user->login($_POST['email'],$_POST['password']);
-        print_r($user);
-    }
+
 
 }
 
@@ -35,17 +32,17 @@ if(!empty($_GET)) {
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
     }
+    if (isset($_GET['jeu'])) {
+        $answerCheck = new fiche();
+        echo $answerCheck->answerCheck();
+    }
 
     if (isset($_GET['resultat'])) {
         $affResultat = new Resultat();
         echo $affResultat->displayResultat();
         exit();
     }
-    /*if (isset($_GET['answer'])) {
-        $answerJson = new dataAnswer();
-        echo $answerJson->dataAnswerCheck();
-        exit();
-    }*/
+
 
 }
 
@@ -59,8 +56,17 @@ if(!empty($_GET)) {
 $json = file_get_contents('php://input');
 // On convertit le flux JSON en tableau d'objets.
 $data = json_decode($json);
+
+
 // On route vers le controller "Annonces" et la méthode d'affichage d'une annonce "annonceDisplay".
 if(!empty($data)) {
+   /* print_r($data);
+    exit();*/
+    if (isset($data->idAnswer)){
+        $check = new answer();
+        echo ($check-> answerCheck($data->idAnswer));
+        exit();
+    }
 
 }
 

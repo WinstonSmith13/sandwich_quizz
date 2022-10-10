@@ -24,27 +24,26 @@
     </div>
 </nav>-->
 
-<nav class="nav">
-    <div class="container">
-        <div class="logo">
+<nav class="navbar">
+
+        <div class="brand-title">
            <a href="/" ><?php
                     $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers-2.svg');
                     echo $svg;
                     ?></a>
         </div>
-        <div id="mainListDiv" class="main_list">
-            <ul class="navlinks">
+    <a href="#" class="toggle-button" >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+        <div class="navbar-links">
+            <ul >
+                <li><a href="/">Accueil</a></li>
                 <li><a href="#">À propos</a></li>
-                <li><a href="#">HighScore</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-    </div>
 </nav>
 
 
