@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SYRADEV\Utils\Php;
+namespace WINSTON\Utils\Php;
 
 
 class Outils {

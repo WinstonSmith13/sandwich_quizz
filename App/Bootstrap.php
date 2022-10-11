@@ -1,6 +1,6 @@
 <?php
 
-use SYRADEV\AutoEncheres\Controllers\Accueil;
+use WINSTON\SandwichQuizz\Controllers\Accueil;
 
 $accueil = new Accueil();
 echo $accueil->display();

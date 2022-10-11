@@ -5,9 +5,9 @@
  * Son rôle unique sera de router l'application vers les contôleurs
  * qui  définissent la logique de l'application puis génèrerent les affichages.
  */
-use SYRADEV\AutoEncheres\Controllers\fiche;
-use SYRADEV\AutoEncheres\Controllers\answer;
-use SYRADEV\AutoEncheres\Controllers\Resultat;
+use WINSTON\SandwichQuizz\Controllers\fiche;
+use WINSTON\SandwichQuizz\Controllers\answer;
+
 
 
 
@@ -36,7 +36,7 @@ if(!empty($_GET)) {
         $answerCheck = new fiche();
         echo $answerCheck->answerCheck();
     }
-    
+
 
 }
 

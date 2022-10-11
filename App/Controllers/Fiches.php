@@ -1,11 +1,11 @@
 <?php
 
-namespace SYRADEV\AutoEncheres\Controllers;
+namespace WINSTON\SandwichQuizz\Controllers;
 
 // On utilisera ici la classe de manipulation de la base de données PdoDb.
 use stdClass;
-use SYRADEV\AutoEncheres\Models\FichesModel;
-use SYRADEV\AutoEncheres\Utils\Database\PdoDb;
+use WINSTON\SandwichQuizz\Models\FichesModel;
+use WINSTON\SandwichQuizz\Utils\Database\PdoDb;
 
 
 
@@ -29,8 +29,6 @@ class fiche extends Controller
 
             $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
         }
-
-        $jsonData = json_encode($data);
         return $this->render('layouts.default','templates.fiche', $data);
     }
 
@@ -52,28 +50,8 @@ class fiche extends Controller
 
         $answerCheck = PdoDb::getInstance()->requete($sql);
 
-        // Transmission des annonce à la vue (Layout + template).
-        /*$data = array();
-
-        foreach ($questionCheck as $question){
-
-            $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], false));
-            $jsonData = json_encode($data);
-        }*/
         $jsonData = json_encode(['success' => true, 'content' => $answerCheck]);
 
-
-        ?>
-
-<!--<script>
-    let answerCheck = /*= $jsonData */;
-</script>-->
-
-
-<?php
         return $this->render('layouts.default','templates.fiche', $jsonData);
     }
-
-
-
 }

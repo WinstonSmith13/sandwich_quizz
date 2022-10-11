@@ -1,10 +1,11 @@
 <?php
 
-namespace SYRADEV\AutoEncheres\Models;
+namespace WINSTON\SandwichQuizz\Models;
 
 /*
  * Modèle Fiches
  */
+
 class FichesModel
 {
     public int $id;
@@ -13,22 +14,17 @@ class FichesModel
     public array $answers;
 
 
-    public function __construct(array $question, array $answers) {
+    public function __construct(array $question, array $answers)
+    {
 
         $this->id = $question['id'];
         $this->question = $question['question'];
-        /*foreach ($answers as $answer){
-
-        if ($answer['answer_check'] === 1){
-            $this->good_answer= $answer['answer'];
-        }
-
-        }*/
         $this->answers = $answers;
         return $this;
     }
 
-    public function __get($property) {
+    public function __get($property)
+    {
         return $this->$property;
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace SYRADEV\AutoEncheres\Utils\Database;
+namespace WINSTON\SandwichQuizz\Utils\Database;
 
 use PDO, PDOException;
 

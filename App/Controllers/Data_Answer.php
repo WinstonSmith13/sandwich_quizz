@@ -1,8 +1,8 @@
 <?php
 
-namespace SYRADEV\AutoEncheres\Controllers;
+namespace WINSTON\SandwichQuizz\Controllers;
 
-use SYRADEV\AutoEncheres\Utils\Database\PdoDb;
+use WINSTON\SandwichQuizz\Utils\Database\PdoDb;
 
 class answer
 {

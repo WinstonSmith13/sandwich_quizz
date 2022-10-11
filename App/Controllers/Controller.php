@@ -1,6 +1,6 @@
 <?php
 
-namespace SYRADEV\AutoEncheres\Controllers;
+namespace WINSTON\SandwichQuizz\Controllers;
 
 class Controller
 {
@@ -19,7 +19,7 @@ class Controller
         $template = str_replace('{pageTitle}', self::PAGETITLE, $layout_content);
 
         // Récupère le template de contenus
-        $view_ar = explode('.', $view );
+        $view_ar = explode('.', $view);
         ob_start();
         require_once(self::VIEWPATH . ucfirst($view_ar[0]) . '/' . $view_ar[1] . self::EXT);
         $view_content = ob_get_contents();
