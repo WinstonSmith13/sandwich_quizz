@@ -36,13 +36,7 @@ if(!empty($_GET)) {
         $answerCheck = new fiche();
         echo $answerCheck->answerCheck();
     }
-
-    if (isset($_GET['resultat'])) {
-        $affResultat = new Resultat();
-        echo $affResultat->displayResultat();
-        exit();
-    }
-
+    
 
 }
 

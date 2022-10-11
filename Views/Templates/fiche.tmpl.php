@@ -1,15 +1,14 @@
 <div class="box">
 <div class="quizz_box">
-    <div class="header_fiche">
+    <div id="headerA" class="header_fiche">
         <div class="title">
             <span>1 / 6</span>
         </div>
         <div class="score">
-            <div class="score_text">Score %</div>
+            <div class="score_text">Score</div>
             <div class="score_aff"> 0</div>
         </div>
     </div>
-
 
     <?php $i = 0;
     foreach ($data as $fiche) { ?>
@@ -33,8 +32,29 @@
         $i++;
     } ?>
 
+<!-- Resultat Affichage -->
 
+</div>
+</div>
+<div id="result" class="d-none">
+<div class="result_box">
+    <div>
+        <div class="icon">
+            <a href="/"><?php
+                $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers.svg');
+                echo $svg;
+                ?></a>
+        </div>
 
+        <div class="score_text">
+            <span class="affFinal">Resultat</span>
+        </div>
+        <div class="buttons">
+            <a href="/">
+                <button class="restart">Recommencer</button>
+            </a>
+        </div>
+    </div>
 </div>
 </div>
 

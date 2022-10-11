@@ -16,7 +16,7 @@ class answer
         $answerCheck = PdoDb::getInstance()->requete($sql, 'fetch');
 
 
-        return json_encode(['success' => true, 'content' => $answerCheck]);
+        return json_encode(['success' => true, 'content' => $answerCheck['answer_check']]);
 
 
     }
