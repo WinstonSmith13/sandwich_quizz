@@ -1,12 +1,15 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+
 }
 
 body {
     background: white;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -67,57 +70,13 @@ header {
 
 }
 
-@media (max-width: 700px) {
-    .toggle-button {
-        position: relative;
-        display: flex;
-        margin: 15px 50px;
-        align-items: center;
-
-
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar {
-        display: flex;
-        float: left;
-
-    }
-
-    .brand-title {
-        display: flex;
-        justify-items: center;
-        align-items: center;
-
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links li {
-        text-align: center;
-    }
-
-    .navbar-links li a {
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-}
-
 .box {
-    position: relative;
+
+position: relative;
     display: flex;
     justify-content: center;
-    align-content: center;
+
+    height: fit-content;
 
 }
 
@@ -127,7 +86,8 @@ header {
 
 
 .quizz_box {
-
+    box-shadow: 10px 5px 20px grey;
+    height: fit-content;
 
 }
 
@@ -148,6 +108,7 @@ header {
     width: 540px;
     background: #6c757d;
     border-radius: 5px;
+    box-shadow: 10px 5px 20px grey;
 
 }
 
@@ -337,12 +298,14 @@ h3 {
     height: 400px;
     padding: 25px 30px;
     border-radius: 5px;
+    box-shadow: 10px 5px 20px grey;
 
 }
 
 .result_box {
     display: inline-flex;
     align-content: center;
+
 
 }
 
@@ -365,20 +328,6 @@ h3 {
 }
 
 
-
-
-
-.score_text {
-
-
-}
-.score_box{
-
-
-}
-.affFinal{
-}
-
 .result_box .buttons {
     display: flex;
     margin: 20px 0;
@@ -399,10 +348,12 @@ h3 {
     transition: all 0.3s ease;
     color: #00B894;
 
-
-
 }
 
+.row {
+    font-weight: 100;
+
+}
 
 footer {
     position: fixed;
@@ -415,8 +366,45 @@ footer {
 
 }
 
-.row {
-    font-weight: 100;
+
+
+@media (max-width: 375px) {
+    body{
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .box {
+        position: relative;
+        max-width: 200px;
+    }
+
 
 }
+
+@media (max-width: 500px) {
+    body{
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .box {
+        position: relative;
+        max-width: 200px;
+    }
+}
+@media (max-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1024px){
+
+}
+
+
+
 

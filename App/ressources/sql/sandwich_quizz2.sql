@@ -10,6 +10,8 @@ DROP DATABASE IF EXISTS `sandwich_quizz`;
 CREATE DATABASE IF NOT EXISTS `sandwich_quizz`;
 USE `sandwich_quizz`;
 
+DROP USER 'formateur'@'localhost' IF EXISTS
+
 CREATE USER 'formateur'@'localhost' IDENTIFIED VIA mysql_native_password USING '***'; GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'formateur'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
 

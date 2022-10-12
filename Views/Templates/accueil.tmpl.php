@@ -27,7 +27,7 @@
         </div>
     </div>
 </div>
-</div>
+
 
 <section id="container_questions<?= $i; ?>" class="d-none">
 </section>
