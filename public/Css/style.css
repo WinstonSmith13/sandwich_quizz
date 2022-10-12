@@ -7,16 +7,13 @@
 
 body {
     background: white;
-    height: 100%;
-
-
-
 
 }
-header{
 
-    margin-bottom: 100px;
+header {
+    margin-bottom: 30px;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,7 +33,6 @@ header{
 
 .navbar-links li {
     list-style: none;
-
 
 }
 
@@ -73,7 +69,7 @@ header{
 
 @media (max-width: 700px) {
     .toggle-button {
-        position:relative;
+        position: relative;
         display: flex;
         margin: 15px 50px;
         align-items: center;
@@ -91,7 +87,8 @@ header{
         float: left;
 
     }
-    .brand-title{
+
+    .brand-title {
         display: flex;
         justify-items: center;
         align-items: center;
@@ -116,27 +113,21 @@ header{
     }
 }
 
-.box{
-
+.box {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+
 }
 
 .info_box {
     width: 380px;
 }
 
-.box {
-
-    display: flex;
-    justify-content: center;
-
-
-}
 
 .quizz_box {
-    position: relative;
+
 
 }
 
@@ -213,8 +204,8 @@ header{
 
 .quizz_box {
 
-    width: 500px;
-    border-radius: 5px;
+    width: 800px;
+    border-radius: 10px;
 }
 
 .quizz_box .header_fiche {
@@ -261,7 +252,7 @@ header{
     background: #FCC822;
     height: 30px;
     width: 45px;
-    color: white;
+    color: black;
     text-align: center;
     line-height: 30px;
     border-radius: 5px;
@@ -275,7 +266,7 @@ header{
 
 .quizz_box section .que_text {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 100;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -328,60 +319,71 @@ footer .total_que span p {
 }
 
 .result_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
 
 }
-h3{
-    color:white;
-    font-family: Poppins,sans-serif;
+
+h3 {
+    color: white;
+    font-family: Poppins, sans-serif;
     font-weight: 800;
     padding-top: 30px;
 }
 
-.result_box {
+#result {
+
     background: #636E72;
-    width: 450px;
+    width: 600px;
+    height: 400px;
     padding: 25px 30px;
     border-radius: 5px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 
+}
+
+.result_box {
+    display: inline-flex;
+    align-content: center;
 
 }
 
 .result_box .icon {
-    margin-bottom: 10px;
+
 }
 
-.result_box .complete_text {
+.result_box .score_text {
     font-size: 20px;
     font-weight: 500;
     color: white;
 }
 
-.result_box .score_text span {
-    display: flex;
+.result_box .score_text {
+
     margin: 10px 0;
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 500;
     color: white;
-    justify-content: center;
 }
 
-.score_text span p {
-    font-weight: 600;
-    padding: 0 4px;
+
+
+
+
+.score_text {
+
+
+}
+.score_box{
+
+
+}
+.affFinal{
 }
 
 .result_box .buttons {
     display: flex;
     margin: 20px 0;
     justify-content: center;
+
 }
 
 .result_box .buttons button {
@@ -389,18 +391,20 @@ h3{
     height: 40px;
     padding: 0 20px;
     border: none;
-    outline: none;
+
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: #00B894;
+
 
 
 }
 
 
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -411,7 +415,7 @@ footer{
 
 }
 
-.row{
+.row {
     font-weight: 100;
 
 }

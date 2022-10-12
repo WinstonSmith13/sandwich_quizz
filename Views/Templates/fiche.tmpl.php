@@ -41,7 +41,7 @@
 <div class="box">
 <div id="result" class="d-none">
     <div class="result_box">
-        <div>
+
             <div class="icon">
                 <a href="/"><?php
                     $svg = file_get_contents('/Library/simplon/sites/sandwich_quizz/public/Images/SVG/food_sandwich_layers.svg');
@@ -50,15 +50,20 @@
             </div>
 
             <div class="score_text">
-                <h3>SCORE</h3>
-                <span class="affFinal">Resultat</span>
+                    <span class="affFinal"></span>
+                    <div class="buttons">
+                        <a href="/">
+                            <button class="restart">Recommencer</button>
+                        </a>
+                    </div>
+
+
+
             </div>
-            <div class="buttons">
-                <a href="/">
-                    <button class="restart">Recommencer</button>
-                </a>
-            </div>
-        </div>
+
+
+
     </div>
+
 </div>
 </div>
