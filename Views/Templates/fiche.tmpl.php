@@ -50,6 +50,7 @@
             </div>
 
             <div class="score_text">
+                <h3>SCORE</h3>
                 <span class="affFinal">Resultat</span>
             </div>
             <div class="buttons">

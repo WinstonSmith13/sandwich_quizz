@@ -11,7 +11,7 @@ window.onload = () => {
             }).then(data => {
             score += data.content;
             selectionScore.innerHTML = `<div class="score_aff"> ${Math.round(score * 100 / 6)} %</div>`;
-            document.querySelector('.affFinal').innerHTML = `<span class="affFinal">Score:<p>${Math.round(score * 100 / 6)}</p> %</span>`;
+            document.querySelector('.affFinal').innerHTML = `<span class="affFinal"><p>${Math.round(score * 100 / 6)}</p> %</span>`;
         })
         return score;
     }
