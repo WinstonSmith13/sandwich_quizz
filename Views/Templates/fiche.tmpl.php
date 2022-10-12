@@ -6,7 +6,7 @@
             </div>
             <div class="score">
                 <div class="score_text">Score</div>
-                <div class="score_aff"> 0</div>
+                <div class="score_aff"> 0 %</div>
             </div>
         </div>
 

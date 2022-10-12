@@ -1,4 +1,4 @@
-
+<header>
 <nav class="navbar">
 
         <div class="brand-title">
@@ -18,6 +18,9 @@
             </ul>
         </div>
 </nav>
+    <hr>
+</header>
+
 
 
 

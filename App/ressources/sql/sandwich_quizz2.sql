@@ -15,8 +15,7 @@ CREATE TABLE `answer` (
   `id` int(11) NOT NULL,
   `question_id` int(11) UNSIGNED NOT NULL,
   `answer` varchar(255) NOT NULL,
-  `answer_check` tinyint(1) NOT NULL,
-  `code_answer` int(11) UNSIGNED NOT NULL
+  `answer_check` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -126,8 +125,7 @@ INSERT INTO `answer` (`id`, `question_id`, `answer`, `answer_check`) VALUES
 
 CREATE TABLE `question` (
   `id` int(10) UNSIGNED NOT NULL,
-  `question` varchar(255) NOT NULL,
-  `code_question` int(10) UNSIGNED NOT NULL
+  `question` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -163,15 +161,14 @@ INSERT INTO `question` (`id`, `question`) VALUES
 
 ALTER TABLE `answer`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_question_id_question_id` (`question_id`),
-  ADD UNIQUE KEY `code_answer` (`code-a`);
+  ADD KEY `fk_question_id_question_id` (`question_id`);
+
 
 --
 -- Indexes for table `question`
 --
 ALTER TABLE `question`
   ADD PRIMARY KEY (`id`);
-  ADD UNIQUE KEY `code_question` (`code_q`),
 
 --
 -- AUTO_INCREMENT for dumped tables
