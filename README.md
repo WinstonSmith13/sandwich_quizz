@@ -14,9 +14,9 @@ Requirements for the project up and running on your local machine.
 
 - Loading database with file: : 
     - "sandwich_quizz2.sql"
-    - Path: /sandwich_quizz/App/ressources/sql/sandwich_quizz2.sql
+    - Path: /sandwich_quizz/config/sql/sandwich_quizz2.sql
 
 ## Authors
 
-- **Medy Krouk** 
+**Medy Krouk** 
 
