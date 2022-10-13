@@ -1,3 +1,33 @@
+commit 07805ef08462a8b0265d1701fd7c5bbe5beef2ec
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 16:37:33 2022 +0200
+
+    Nettoyage pour rendu final.
+
+commit c712d3eec331d1853a76817926b363c4cd2d4b36
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 16:32:49 2022 +0200
+
+    Update Router.php
+
+commit a7f05f03620ef6c996977b068478d27655a03749
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 16:29:00 2022 +0200
+
+    Ajout des commentaires et nettoyage du projet pour le rendu final.
+
+commit 2461efcfe41078984d96ec56643a620577153103
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 10:43:31 2022 +0200
+
+    Create ECF_MK_PRESENTATION_131022.key
+
+commit cece8ed7bd6b5d8c8edc764efdc4e5edeb974adb
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 09:58:30 2022 +0200
+
+    Peaufinage du rendu deplacement d'éléments.
+
 commit 9005a8f1f39f4a774a2eb5950b46d75a21845e6b
 Author: Medy <krouk.medy@gmail.com>
 Date:   Wed Oct 12 23:20:14 2022 +0200
