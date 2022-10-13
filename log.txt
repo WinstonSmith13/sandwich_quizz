@@ -1,0 +1,123 @@
+commit 9005a8f1f39f4a774a2eb5950b46d75a21845e6b
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 12 23:20:14 2022 +0200
+
+    Commit après travail sur le css.
+
+commit 6c28fcc1b17fbbca7e5e699f9caa95954ff66a92
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 12 16:58:13 2022 +0200
+
+    Modification du fichier ReadMe et ajouts des fichiers annexes pour la mise en place du projet.
+
+commit 99c5abd7cc4eb1c4cf86edffa6699ae900018d5f
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 12 15:32:29 2022 +0200
+
+    travail sur le readme et la base de données avec la création du user : Formateur.
+
+commit da0819f511793b41805d14325342b9b7b01443cb
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 12 12:30:34 2022 +0200
+
+    commit de mi journée avec travail sur le footer.
+
+commit 4dc2f311baff86fc346e212db89569983a35aafb
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 12 10:11:22 2022 +0200
+
+    modification du  maquettage et de l'affichage du résultat.
+    
+    Travail de peaufinage sur le maquettage.
+
+commit 8133f2a2fb5d158bbdc5c73abc162c64f0891bbc
+Author: Medy <krouk.medy@gmail.com>
+Date:   Tue Oct 11 17:26:46 2022 +0200
+
+    Create README.md
+
+commit 3bb889870e8740874a5b6a22d5f9891c1b088aee
+Author: Medy <krouk.medy@gmail.com>
+Date:   Tue Oct 11 16:36:59 2022 +0200
+
+    nettoyage du dossier
+    
+    nettoyage du dossier.
+
+commit d9c9acbe1bfadecd61a708f17d258e92a9e04104
+Author: Medy <krouk.medy@gmail.com>
+Date:   Tue Oct 11 15:46:30 2022 +0200
+
+    Travail sur le front.
+
+commit 1759eb9a951d7880a97739821bc0ada44c8eec9e
+Author: Medy <krouk.medy@gmail.com>
+Date:   Tue Oct 11 13:51:10 2022 +0200
+
+    Fin de travail sur l'algo maintenant plus qu'à travailler le front.
+
+commit 99146a3e05fcb1b5ca953eae4d0222a1e2b7e7c1
+Author: Medy <krouk.medy@gmail.com>
+Date:   Mon Oct 10 15:04:55 2022 +0200
+
+    Commit important avec nettoyage du projet et surtout ajout du Fetch.
+
+commit dde31ce94e10b868e68e96562442cefa0eafb490
+Author: Medy <krouk.medy@gmail.com>
+Date:   Sat Oct 8 15:15:14 2022 +0200
+
+    Travail front et cleanage.
+
+commit b6781ce5cb10f98f6afca182160213222e83229b
+Author: Medy <krouk.medy@gmail.com>
+Date:   Fri Oct 7 17:01:33 2022 +0200
+
+    Commit de fin de journée retour à l'idée du formulaire pour recupérer le post.
+
+commit d2b5bb0736e746b3e1b7c3ccca338214ad5b07f3
+Author: Medy <krouk.medy@gmail.com>
+Date:   Fri Oct 7 15:12:19 2022 +0200
+
+    Travail toujours le fetch pour acceder au donnes de sql dans js.
+
+commit 7f1c367b7215253828d7fcfc0b12a0a48d57f77c
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 6 19:19:25 2022 +0200
+
+    Fin de journée avec travail sur le fetch.
+
+commit 60d629b8699a511e0a149f0df1b05eb38a8c5206
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 6 14:13:50 2022 +0200
+
+    Mi journée travail sur la page de resultat.
+
+commit c39dc2ecb26ac80dc382aa3c3eba196cd5fa18cc
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 6 10:17:35 2022 +0200
+
+    Debut de journée ajout de la fonctionnalité changer de question.
+
+commit b9a255a0151bead6a02c9be38149f9b75097abc9
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 5 17:26:11 2022 +0200
+
+    Commit de fin de journée essai de changer les fiches.
+
+commit 59265c2e29349a40837868acf03a766036f445bc
+Author: Medy <krouk.medy@gmail.com>
+Date:   Wed Oct 5 13:46:05 2022 +0200
+
+    Journée 3 avec le travail sur le Js.
+
+commit 639734cb6b1f9e68bd3b795d36e7d18ea3f0b1e5
+Author: Medy <krouk.medy@gmail.com>
+Date:   Tue Oct 4 20:09:12 2022 +0200
+
+    Commit de fin de journée avec renommage.
+
+commit f4f6afea10eb8c635344853cc7e8c5c7cc4d443f
+Author: Medy <krouk.medy@gmail.com>
+Date:   Tue Oct 4 16:32:40 2022 +0200
+
+    Premier commit avec l'ajout du mvcet des questions dans l'affichage.
