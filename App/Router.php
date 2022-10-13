@@ -32,12 +32,6 @@ if(!empty($_GET)) {
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
     }
-    if (isset($_GET['jeu'])) {
-        $answerCheck = new fiche();
-        echo $answerCheck->answerCheck();
-    }
-
-
 }
 
 
@@ -52,10 +46,9 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 
 
-// On route vers le controller "Annonces" et la méthode d'affichage d'une annonce "annonceDisplay".
+// On route vers le controller "Data_Answer" pour la récupération des données sur les réponses(answer_check).
 if(!empty($data)) {
-   /* print_r($data);
-    exit();*/
+
     if (isset($data->idAnswer)){
         $check = new answer();
         echo ($check-> answerCheck($data->idAnswer));

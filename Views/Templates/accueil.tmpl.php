@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="/Css/style.css">
 </head>
 <body>
-
 <?php $i = 0;
  ?>
-
 <div class="box">
     <div class="info_box">
         <div class="info_title">

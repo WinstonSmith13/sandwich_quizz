@@ -2,8 +2,8 @@
 
 namespace WINSTON\SandwichQuizz\Controllers;
 
-// On utilisera ici la classe de manipulation de la base de données PdoDb.
-use stdClass;
+// Utilisation de la classe de manipulation de la base de données PdoDb.
+
 use WINSTON\SandwichQuizz\Models\FichesModel;
 use WINSTON\SandwichQuizz\Utils\Database\PdoDb;
 
@@ -14,44 +14,18 @@ use WINSTON\SandwichQuizz\Utils\Database\PdoDb;
  */
 class fiche extends Controller
 {
-
     public function listFiches(): array|string
     {
-
-
-
-        // Exécution de la requête
+        // Exécution de la requête pour récupérer les questions avec une limitation de 6 questions et aléatoirement.
         $questions = PdoDb::getInstance()->request('*', 'question', false, '', '', true, 'RAND()', 'DESC', true, 6);
-        // Transmission des annonce à la vue (Layout + template).
+
         $data = array();
 
         foreach ($questions as $question){
-
+            // Exécution de la requête pour récupérer les réponses pour chaques questions.
             $data[] = new FichesModel($question, PdoDb::getInstance()->request('*', 'answer', 'true', 'question_id', $question['id'], true, 'RAND()' ));
         }
+        //Envoi des données vers la vue Fiche.
         return $this->render('layouts.default','templates.fiche', $data);
-    }
-
-
-
-    public function ficheAffichage(): array|string
-    {
-        // Transmission des annonce à la vue (Layout + template).
-        return $this->render('layouts.default','templates.fiche');
-    }
-
-
-
-   public function answerCheck(): array|string
-    {
-
-        // Exécution de la requête
-        $sql ='SELECT answer.answer_check, answer.id FROM answer'  ;
-
-        $answerCheck = PdoDb::getInstance()->requete($sql);
-
-        $jsonData = json_encode(['success' => true, 'content' => $answerCheck]);
-
-        return $this->render('layouts.default','templates.fiche', $jsonData);
     }
 }
