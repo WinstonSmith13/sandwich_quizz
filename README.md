@@ -17,6 +17,11 @@ Requirements for the project up and running on your local machine.
     - Path: /sandwich_quizz/config/sql/sandwich_quizz2.sql
   
 ### Educational deliverables
+
+- Website design :
+  - Path:  
+    /sandwich_quizz/ressources_pedagogique/1_Design/ecf_SQ_maquettage_MK_121022.pdf
+
 - Git change history : 
   - Path:  
     /sandwich_quizz/ressources_pedagogique/5_Git/log.txt  

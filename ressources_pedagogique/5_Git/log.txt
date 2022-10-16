@@ -1,3 +1,21 @@
+commit 5f576182755b6a785d851ff4e5e27f601d78ecd5
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 19:15:01 2022 +0200
+
+    Nettoyage finale.
+
+commit 24c4f7447452662c88bf8954905d51e64b4aa2e4
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 19:12:08 2022 +0200
+
+    Travail sur la partie livrable du projet.
+
+commit 0566aeb1789f09c10ae051964b2d2c71c01e27d9
+Author: Medy <krouk.medy@gmail.com>
+Date:   Thu Oct 13 16:38:35 2022 +0200
+
+    Update log.txt
+
 commit 07805ef08462a8b0265d1701fd7c5bbe5beef2ec
 Author: Medy <krouk.medy@gmail.com>
 Date:   Thu Oct 13 16:37:33 2022 +0200
