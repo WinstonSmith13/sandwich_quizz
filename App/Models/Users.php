@@ -14,7 +14,7 @@ class UsersModel
 
     public function __construct($userInfos) {
         $this->pseudo = $userInfos['pseudo'];
-        $this->password = password_hash($userInfos['password'], PASSWORD_DEFAULT);
+        $this->password = md5($userInfos['password']);
         return $this;
     }
 }

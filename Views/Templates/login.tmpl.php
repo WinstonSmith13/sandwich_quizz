@@ -12,11 +12,11 @@
             <div class="card">
                 <div class="card-body">
                     <!-- Formulaire traité en Ajax avec Fetch, ne comporte qu'un id. -->
-                    <form id="loginform" autocomplete="off">
+                    <form action="/" method="POST" id="loginform" autocomplete="off">
                         <div class="form-group has-validation mb-3">
-                            <label for="pseudo" class="form-label">Courriel :</label>
+                            <label for="pseudo" class="form-label">Pseudo :</label>
                             <input type="text" class="form-control" name="pseudo" id="pseudo" required autofocus>
-                            <div class="invalid-feedback">Veuillez saisir un courriel valide !</div>
+                            <div class="invalid-feedback">Veuillez saisir un pseudo !</div>
                             <input type="hidden" name="login" value="1">
                         </div>
                         <div class="form-group has-validation mb-3">
@@ -26,7 +26,7 @@
 
                         </div>
                         <div class="form-group">
-                            <button id="login-btn" type="button" class="btn btn-outline-primary float-end">Se connecter</button>
+                            <button id="login-btn" type="submit" class="btn btn-outline-primary float-end">Se connecter</button>
                         </div>
                     </form>
                 </div>

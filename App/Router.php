@@ -20,9 +20,15 @@ $_GP = array_merge($_POST, $_GET);
  * Gestion des appels avec GET.
  */
 if(count($_GP)>0) {
-    if (isset($_GET['jeu'])) {
+    if (isset($_SESSION['user']) && !empty($_SESSION['user']) && isset( $_GET['jeu'])) {
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
+    }
+
+    if(isset($_GP['login']) && $_GP['login'] === '1') {
+        $utilisateur = new Users();
+        echo $utilisateur->login($_GP);
+        exit();
     }
 
     if (isset($_GET['register'])) {
@@ -34,7 +40,10 @@ if(count($_GP)>0) {
         echo $inscription->register($_GP);
         exit();
     }
-
+    if(isset($_GP['logout'])) {
+        Users::logout();
+        exit();
+    }
 
 
 }
