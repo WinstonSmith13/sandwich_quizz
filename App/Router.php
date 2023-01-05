@@ -28,7 +28,7 @@ if (count($_GP) > 0) {
         echo $affichageFiche->listFiches();
     }
 
-    if (isset($_GET['score'])) {
+    if (isset($_SESSION['user']) && isset($_GET['score'])) {
 
         /*if (isset($_SESSION['score']) && isset($_SESSION['user']['id'])) {
             $saveScore = new Scores();
@@ -44,10 +44,11 @@ if (count($_GP) > 0) {
             echo $saveScore->saveScore($_SESSION['user']['id'], $_SESSION['score']);
         }
     }
-
-    if(isset($_GET['scoreboard'])){
-        $displayScorboard = new Scores();
-        echo $displayScorboard->displayScoreBoard($_SESSION['user']['id']);
+    if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+        if (isset($_GET['scoreboard'])) {
+            $displayScorboard = new Scores();
+            echo $displayScorboard->displayScoreBoard($_SESSION['user']['id']);
+        }
     }
 
     if (isset($_GP['login']) && $_GP['login'] === '1') {

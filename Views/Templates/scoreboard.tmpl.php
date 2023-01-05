@@ -11,23 +11,27 @@
 <body>
 <?php $i = 0;
 ?>
-<h6 class="mb-0">Top Score</h6>
-<?php print_r($data);
-foreach ($data as $scoreBest) { ?>
+
+
 
 
     <div class="container d-flex justify-content-center">
 
         <ul class="list-group mt-5 text-white">
             <li class="list-group-item d-flex justify-content-between align-content-center">
-                <div class="d-flex flex-row">
-                    <div class="ml-2">
+                <div class="d-flex flex-column">
 
-                        <div class="about">
+                    <div class="text-center">
+                        <h6 class="m-3 text-warning fw-bold fs-1">Top Score</h6>
+                        <?php
+                        foreach ($data as $scoreBest) { ?>
+                        <div class="">
                             <?=
-                            $scoreBest['scoreFinal']
-                            ?>
+                            sprintf("%d%%", ($scoreBest['scoreFinal']/6) * 100)
+                            ?> .
                         </div>
+                            <?php
+                        } ?>
                     </div>
                 </div>
 
@@ -35,8 +39,7 @@ foreach ($data as $scoreBest) { ?>
 
         </ul>
     </div>
-    <?php
-} ?>
+
 <section id="container_questions<?= $i; ?>" class="d-none">
 </section>
 

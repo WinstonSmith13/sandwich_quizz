@@ -46,9 +46,9 @@ class Scores extends Controller
         return $this->render('layouts.default', 'templates.listscore');
     }
 
-    public function displayScoreBoard($userId): array|string
+    public function displayScoreBoard(): array|string
     {
-        $sqlScore = 'SELECT scoreFinal FROM score WHERE userId = '.$userId.' ORDER BY scoreFinal DESC LIMIT 3';
+        $sqlScore = 'SELECT scoreFinal, user.pseudo FROM score INNER JOIN user ON score.userId = user.id ORDER BY scoreFinal DESC LIMIT 5';
         $scoreBoard = PdoDb::getInstance()->requete($sqlScore );
 
         return $this->render('layouts.default', 'templates.scoreboard', $scoreBoard);
