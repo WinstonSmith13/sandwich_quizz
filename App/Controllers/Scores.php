@@ -9,10 +9,10 @@ use WINSTON\SandwichQuizz\Models\ScoresModel;
 use WINSTON\SandwichQuizz\Utils\Database\PdoDb;
 
 
-
 /*
  *  Classe de gestion des annonces étendue depuis la classe Controller.
  */
+
 class Scores extends Controller
 {
     public function display(): array|string
@@ -23,10 +23,11 @@ class Scores extends Controller
         /*$pseudoSql = 'SELECT `pseudo` FROM `user` JOIN score on userId = user.id';*/
         /*$pseudo = PdoDb::getInstance()->requete($pseudoSql,'fetch');*/
 
-        array_push($arrayScorePseudo,$pseudoSql, $scores);
+        array_push($arrayScorePseudo, $pseudoSql, $scores);
 
-        return $this->render('layouts.default', 'templates.score', $arrayScorePseudo );
+        return $this->render('layouts.default', 'templates.listscore', $arrayScorePseudo);
     }
+
     //fonction insertion dans la BDD
 
 
@@ -35,9 +36,23 @@ class Scores extends Controller
         $saveScoreObj = new ScoresModel($userId, $scoreFinal);
         PdoDb::getInstance()->inserer('score', $saveScoreObj);
 
-        return true;
+        return $this->render('layouts.default', 'templates.accueil');
 
 
     }
+
+    public function displayListScore(): array|string
+    {
+        return $this->render('layouts.default', 'templates.listscore');
+    }
+
+    public function displayScoreBoard($userId): array|string
+    {
+        $sqlScore = 'SELECT scoreFinal FROM score WHERE userId = '.$userId.' ORDER BY scoreFinal DESC LIMIT 3';
+        $scoreBoard = PdoDb::getInstance()->requete($sqlScore );
+
+        return $this->render('layouts.default', 'templates.scoreboard', $scoreBoard);
+    }
+
 
 }

@@ -40,7 +40,7 @@
                     </a>-->
                     <input type="hidden" name="scoreSave" value="1">
                     <button type="submit"  class="btn btn-outline-primary float-end">
-                        Recommencer
+                        Enregistrez bien votre score !
                     </button>
                 </div>
             </div>

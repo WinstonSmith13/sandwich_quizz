@@ -28,6 +28,28 @@ if (count($_GP) > 0) {
         echo $affichageFiche->listFiches();
     }
 
+    if (isset($_GET['score'])) {
+
+        /*if (isset($_SESSION['score']) && isset($_SESSION['user']['id'])) {
+            $saveScore = new Scores();
+            echo $saveScore->saveScore($_SESSION['user']['id'], $_SESSION['score']);*/
+        $affichageScore = new Scores();
+        echo $affichageScore->displayListScore();
+    }
+
+    if (isset($_POST['scoreSave'])) {
+
+        if (isset($_SESSION['score']) && isset($_SESSION['user']['id'])) {
+            $saveScore = new Scores();
+            echo $saveScore->saveScore($_SESSION['user']['id'], $_SESSION['score']);
+        }
+    }
+
+    if(isset($_GET['scoreboard'])){
+        $displayScorboard = new Scores();
+        echo $displayScorboard->displayScoreBoard($_SESSION['user']['id']);
+    }
+
     if (isset($_GP['login']) && $_GP['login'] === '1') {
         $utilisateur = new Users();
         echo $utilisateur->login($_GP);
@@ -38,31 +60,17 @@ if (count($_GP) > 0) {
         $affichageRegister = new Users();
         echo $affichageRegister->registerDisplay();
     }
+
     if (isset($_GP['register']) && $_GP['register'] === '1') {
         $inscription = new Users();
         echo $inscription->register($_GP);
         exit();
     }
+
     if (isset($_GP['logout'])) {
         Users::logout();
         exit();
     }
-
-
-    if (!empty($_GET['score']) ) {
-        if ($_POST['scoreSave']  === '1') {
-            if (isset($_SESSION['score']) && isset($_SESSION['user']['id'])) {
-                $saveScore = new Scores();
-                echo $saveScore->saveScore($_SESSION['user']['id'], $_SESSION['score']);
-                $affichageScore = new Scores();
-                echo $affichageScore->Display();
-            }
-
-        }
-    }
-
-
-
 }
 
 

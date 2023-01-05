@@ -38,7 +38,7 @@ switch ($uriSegments[1]) {
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/" class="nav-link px-2<?= $activeHome ?>">Accueil</a></li>
+                <li><a href="/?jeu" class="nav-link px-2<?= $activeHome ?>">Accueil</a></li>
                 <?php
                 if(isset($_SESSION['user'])) {
                     ?>
@@ -52,6 +52,7 @@ switch ($uriSegments[1]) {
                 <?php
                 if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
                     ?>
+                    <a href="/?scoreboard" class="btn btn-outline-light me-2">Tableau des scores</a>
                     <a href="/?logout" class="btn btn-outline-light me-2">Déconnexion</a>
                     <?php
                 } else {
