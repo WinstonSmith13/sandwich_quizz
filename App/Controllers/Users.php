@@ -54,7 +54,7 @@ class Users extends Controller
         // Si la requête renvoie un utilisateur,
         // on stocke les informations de l'utilisateur dans un tableau de session.
         if (is_array($login) && !empty($login)) {
-
+            $_SESSION['user']['id'] = $login['id'];
             $_SESSION['user']['pseudo'] = $login['pseudo'];
             $_SESSION['user']['password'] = $login['password'];
 

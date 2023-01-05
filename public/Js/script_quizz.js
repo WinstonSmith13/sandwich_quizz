@@ -26,8 +26,7 @@ window.onload = () => {
             }).then(data => {
 
                 score =  data ;
-                console.log(score);
-
+                console.log(score)
 
                 //Récupération de la valeur de la table "answer_check" dans la base de donnée (soit 0 ou 1) et ajout dans
             //la variable score.
@@ -35,7 +34,7 @@ window.onload = () => {
             //score += data.content;
 
             //Affiche du score à la suite de la réponse.
-            //selectionScore.innerHTML = `<div class="score_aff"> ${Math.round(score * 100 / 6)} %</div>`;
+            selectionScore.innerHTML = `<div class="score_aff"> ${Math.round(score * 100 / 6)} %</div>`;
             //Récupération et affichage du score pour le résultat.
             //document.querySelector('.affFinal').innerHTML = `<h3 class="affFinal">SCORE<h1>${Math.round(score * 100 / 6)} %</h1></h3>`;
 

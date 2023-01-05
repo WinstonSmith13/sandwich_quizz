@@ -42,7 +42,7 @@ switch ($uriSegments[1]) {
                 <?php
                 if(isset($_SESSION['user'])) {
                     ?>
-                    <li><a class="nav-link px-2 text-white"> (Bienvenue <?= $_SESSION['user']['pseudo'] . ' ' . $_SESSION['user']['pseudo']; ?>)</a></li>
+                    <li><a class="nav-link px-2 text-white"> (Bienvenue <?= $_SESSION['user']['pseudo'] . ' ' . $_SESSION['user']['id']; ?>)</a></li>
                     <?php
                 }
                 ?>

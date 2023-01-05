@@ -11,6 +11,7 @@
 <body>
 <?php $i = 0;
  ?>
+<form action="/" method="POST">
 <div class="box">
     <div id="result">
         <div class="result_box">
@@ -32,19 +33,21 @@
             <div class="score_text">
                 <!-- Affichage du Score -->
                 <span class="affFinal"></span>
-<?php foreach ($data as $scores  ){
-    echo $scores->scores;
-} ?>
+<?php $score= ($_SESSION['score']/6); $scorePourcentage = sprintf("%d%%", $score * 100); echo $scorePourcentage; echo  $_SESSION['user']['id']?>
                 <div class="buttons">
-                    <a href="/?jeu">
+                   <!-- <a href="/?jeu">
                         <button class="restart">Recommencer</button>
-                    </a>
+                    </a>-->
+                    <input type="hidden" name="scoreSave" value="1">
+                    <button type="submit"  class="btn btn-outline-primary float-end">
+                        Recommencer
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+</form>
 
 <section id="container_questions<?= $i; ?>" class="d-none">
 </section>
