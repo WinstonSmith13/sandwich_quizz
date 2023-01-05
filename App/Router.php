@@ -3,6 +3,7 @@
 
 use WINSTON\SandwichQuizz\Controllers\fiche;
 use WINSTON\SandwichQuizz\Controllers\answer;
+use WINSTON\SandwichQuizz\Controllers\Scores;
 use WINSTON\SandwichQuizz\Controllers\Users;
 
 
@@ -44,6 +45,10 @@ if(count($_GP)>0) {
         Users::logout();
         exit();
     }
+    if (isset($_GET['score'])) {
+        $affichageScore = new Scores();
+        echo   $affichageScore ->Display();
+    }
 
 
 }
@@ -64,9 +69,23 @@ if(!empty($data)) {
 
     if (isset($data->idAnswer)){
         $check = new answer();
-        echo ($check->answerCheck($data->idAnswer));
+        $_SESSION['score'] += $check->verificationAnswer($data->idAnswer);
+        echo ($_SESSION['score']);
         exit();
     }
+
+   /* if (isset($data->idAnswer)){
+        $check = new answer();
+        echo ($check->answerCheck($data->idAnswer));
+        exit();
+    }*/
+  /*  if (isset($data->id)) {
+        $data_answer = new answer();
+        $_SESSION['score'] += $data_answer->verificationAnswer($data->id);
+        echo json_encode($_SESSION['score']);
+        exit();
+    }*/
+
 
 }
 

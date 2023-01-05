@@ -3,7 +3,7 @@
 namespace WINSTON\SandwichQuizz\Models;
 
 /*
- * Modèle Fiches
+ * Modèle Users
  */
 
 class UsersModel
