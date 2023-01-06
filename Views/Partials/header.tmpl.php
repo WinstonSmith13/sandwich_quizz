@@ -24,7 +24,7 @@ switch ($uriSegments[1]) {
 <header class="p-3 text-bg-dark">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/">
+            <a href="/?accueil">
                 <!-- Affichage du logo -->
                 <svg height="15mm" viewBox="0 0 266.44794 196.42493" width="15mm">
                     <path color="#000"
@@ -38,7 +38,7 @@ switch ($uriSegments[1]) {
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/?jeu" class="nav-link text-white px-2<?= $activeHome ?>">Accueil</a></li>
+                <li><a href="/?accueil" class="nav-link text-white px-2<?= $activeHome ?>">Accueil</a></li>
                 <?php
                 if(isset($_SESSION['user'])) {
                     ?>

@@ -25,11 +25,18 @@
                         <h6 class="m-3 text-warning fw-bold fs-1">Top Score</h6>
                         <?php
                         foreach ($data as $scoreBest) { ?>
-                        <div class="">
+<div class="d-flex justify-content-between text-dark">
+                        <div class="fw-bold  fs-5"">
+                            <?= $scoreBest['pseudo'] ?>
+                            </div>
+    <div class="fs-5">
                             <?=
                             sprintf("%d%%", ($scoreBest['scoreFinal']/6) * 100)
-                            ?> .
+                            ?>
+
                         </div>
+</div>
+                            <hr class="text-dark">
                             <?php
                         } ?>
                     </div>

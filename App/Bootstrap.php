@@ -1,5 +1,6 @@
 <?php
 use WINSTON\SandwichQuizz\Controllers\Users;
+use WINSTON\SandwichQuizz\Controllers\Accueil;
 
-$login = new Users();
-echo $login->authDisplay();
+$accueil = new Accueil();
+echo $accueil ->display();

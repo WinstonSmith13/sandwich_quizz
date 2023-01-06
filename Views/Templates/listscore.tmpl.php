@@ -30,16 +30,16 @@
                     </a>
                 </div>
 
-                <div class="score_text">
+                <div class="score_text d-flex align-items-center">
                     <!-- Affichage du Score -->
-                    <span class="affFinal"></span>
-                    <?php $score= ($_SESSION['score']/6); $scorePourcentage = sprintf("%d%%", $score * 100); echo $scorePourcentage; echo  $_SESSION['user']['id']?>
-                    <div class="buttons">
+                    <div class="flex-column text-center fw-bold">
+                    <?php $score= ($_SESSION['score']/6); $scorePourcentage = sprintf("%d%%", $score * 100); echo $scorePourcentage; ?>
+
                         <!-- <a href="/?jeu">
                              <button class="restart">Recommencer</button>
                          </a>-->
                         <input type="hidden" name="scoreSave" value="1">
-                        <button type="submit"  class="btn btn-outline-primary float-end">
+                        <button type="submit"  class="btn btn-warning fw-bold">
                             Enregistrez bien votre score !
                         </button>
                     </div>

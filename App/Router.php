@@ -1,6 +1,7 @@
 <?php
 
 
+use WINSTON\SandwichQuizz\Controllers\Accueil;
 use WINSTON\SandwichQuizz\Controllers\fiche;
 use WINSTON\SandwichQuizz\Controllers\answer;
 use WINSTON\SandwichQuizz\Controllers\Scores;
@@ -27,6 +28,12 @@ if (count($_GP) > 0) {
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
     }
+    if ( empty($_SESSION['user']) && isset($_GET['jeu'])) {
+
+        $login = new Users();
+        echo $login->authDisplay();
+    }
+
 
     if (isset($_SESSION['user']) && isset($_GET['score'])) {
 
@@ -65,6 +72,11 @@ if (count($_GP) > 0) {
     if (isset($_GP['register']) && $_GP['register'] === '1') {
         $inscription = new Users();
         echo $inscription->register($_GP);
+        exit();
+    }
+    if (isset($_GET['accueil'])) {
+        $accueil = new Accueil();
+        echo $accueil ->display();
         exit();
     }
 
