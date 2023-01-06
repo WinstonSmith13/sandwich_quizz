@@ -1,7 +1,30 @@
-<header>
-    <nav class="navbar">
-        <div class="brand-title">
-            <a href="/">
+<?php
+
+
+use WINSTON\Utils\Php\Outils;
+
+$uriSegments = Outils::getUriSegments();
+$activeLogin = $activeRegister = '';
+$activeHome = ' text-secondary';
+switch ($uriSegments[1]) {
+    case 'login':
+        $activeLogin = ' active';
+        break;
+    case 'register':
+        $activeRegister = ' active';
+        break;
+    default:
+        $activeHome = '';
+        break;
+
+}
+?>
+
+
+<header class="p-3 text-bg-dark">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/?accueil">
                 <!-- Affichage du logo -->
                 <svg height="15mm" viewBox="0 0 266.44794 196.42493" width="15mm">
                     <path color="#000"
@@ -13,14 +36,35 @@
                           transform="translate(-123.02652,10.355116) matrix(0.26458333,0,0,0.26458333,502.47607,-1833.0334)"/>
                 </svg>
             </a>
-        </div>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="/">Accueil</a></li>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/?accueil" class="nav-link text-white px-2<?= $activeHome ?>">Accueil</a></li>
+                <?php
+                if(isset($_SESSION['user'])) {
+                    ?>
+                    <li><a class="nav-link px-4 text-warning"> Bienvenue <?=  $_SESSION['user']['pseudo']   ; ?></a></li>
+                    <?php
+                }
+                ?>
             </ul>
+
+            <div class="text-end">
+                <?php
+                if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+                    ?>
+                    <a href="/?scoreboard" class="btn btn-outline-light me-2">Tableau des scores</a>
+                    <a href="/?logout" class="btn btn-outline-light me-2">Déconnexion</a>
+                    <?php
+                } else {
+                    ?>
+                    <a href="/?login" class="btn btn-outline-light me-2<?= $activeLogin; ?>">Connexion</a>
+                    <?php
+                }
+                ?>
+
+            </div>
         </div>
-    </nav>
-    <hr>
+    </div>
 </header>
 
 

@@ -30,6 +30,12 @@ class Outils {
         return $check;
     }
 
+    /* Fonction qui renvoie les segments de l'url courante */
+    static public function getUriSegments(): array
+    {
+        return explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    }
+
     /* Fonction qui s'assure qu'un appel de page PHP est bien effectué depuis le nom de domaine référencé */
     static public function domainCheck(): bool
     {

@@ -7,7 +7,7 @@
             </div>
             <div class="score">
                 <div class="score_text">Score</div>
-                <div class="score_aff"> 0 %</div>
+                <div class="score_aff"> 0 % </div>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<!-- Affichage du résultat du Quizz -->
+<!-- Affichage du résultat du Quizz
 <div class="box">
     <div id="result" class="d-none">
         <div class="result_box">
@@ -64,7 +64,7 @@
             </div>
 
             <div class="score_text">
-                <!-- Affichage du Score -->
+                Affichage du Score
                 <span class="affFinal"></span>
 
                 <div class="buttons">
@@ -75,4 +75,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
