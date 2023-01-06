@@ -11,7 +11,7 @@ $conf = [
         /* Identifiants pour se connecter à la base de données */
         'host'      => 'localhost',
         'database'  => 'sandwich_quizz',
-        'user'      => 'formateur',
-        'password' => '1234'
+        'user'      => 'root',
+        'password' => '2212mK22'
     ]
 ];
