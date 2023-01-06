@@ -8,18 +8,20 @@
         <div class="col-6 mt-3 mb-3 mx-auto">
             <h1 class="">Veuillez vous connecter pour jouer</h1>
         </div>
-
+    
     <?php if($data=='true'){?>
 
-        <div class="alert alert-success" role="alert">
+        <div id="alert-success" class="alert alert-success" role="alert">
            Vous êtes bien inscrit maintenant connectez-vous.
+
         </div>
     <?php }
     ?>
-    <?php if($data=='false'){?>
+    <?php if($data=='false'){ $data = ''?>
 
-        <div class="alert alert-danger" role="alert">
+        <div id="alert-danger" class="alert alert-danger" role="alert">
             Vous êtes déjà inscrit, connectez-vous.
+
         </div>
     <?php }
     ?>
@@ -61,7 +63,7 @@
 
 </section>
 
-
+<script type="module" src="/Js/script_login.js"></script>
 
 
 

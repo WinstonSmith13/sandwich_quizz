@@ -40,7 +40,7 @@
                          </a>-->
                         <input type="hidden" name="scoreSave" value="1">
                         <button type="submit"  class="btn btn-warning fw-bold">
-                            Enregistrez bien votre score !
+                            Enregistrez bien votre score, et recommencez !
                         </button>
                     </div>
                 </div>

@@ -21,7 +21,9 @@ class Users extends Controller
      */
     public function authDisplay(): array|string
     {
-        return $this->render('layouts.default', 'templates.login');
+        $connected = '';
+
+        return $this->render('layouts.default', 'templates.login', $connected);
     }
 
     /*
@@ -60,7 +62,7 @@ class Users extends Controller
 
             // La connexion à l'application a réussi, on renvoie true.
             $connected = 'true';
-            header('Location: /?jeu');
+            header('Location: /?accueil');
         } else {
             // La connexion à l'application a échoué, on renvoie false.
             $connected = 'false';
@@ -90,7 +92,7 @@ class Users extends Controller
             $newUserObj = new UsersModel($newUser);
             PdoDb::getInstance()->inserer('user', $newUserObj);
             $newUserId = PdoDb::getInstance()->dernierIndex();
-            $userCreated = "true";
+            $userCreated = 'true';
         }
 
         return $this->render('layouts.default', 'templates.login', $userCreated);
