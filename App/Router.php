@@ -25,6 +25,8 @@ if (count($_GP) > 0) {
     if (isset($_SESSION['user']) && !empty($_SESSION['user']) && isset($_GET['jeu'])) {
 
         $_SESSION['score'] = 0;
+
+
         $affichageFiche = new fiche();
         echo $affichageFiche->listFiches();
     }
@@ -64,6 +66,10 @@ if (count($_GP) > 0) {
         exit();
     }
 
+    if (isset($_GET['login'])) {
+        $affichageLogin = new Users();
+        echo $affichageLogin->authDisplay();
+    }
     if (isset($_GET['register'])) {
         $affichageRegister = new Users();
         echo $affichageRegister->registerDisplay();

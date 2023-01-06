@@ -11,6 +11,8 @@
 <body>
 <?php $i = 0;
  ?>
+
+
 <div class="box">
     <div class="info_box">
         <div class="info_title">

@@ -44,7 +44,7 @@ class Users extends Controller
         $password = $credentials['password'];
 
         // On créé une variable de retour pour la méthode login.
-        $connected = false;
+        $connected = '';
 
         // Requete de type SELECT * sur la table utilisateurs,
         // On applique à la clause WHERE la condition d'égalité du courriel et du mot de passe haché MD5.
@@ -59,13 +59,15 @@ class Users extends Controller
             $_SESSION['user']['password'] = $login['password'];
 
             // La connexion à l'application a réussi, on renvoie true.
-            $connected = true;
+            $connected = 'true';
+            header('Location: /?jeu');
         } else {
             // La connexion à l'application a échoué, on renvoie false.
-            $connected = false;
+            $connected = 'false';
+            header('Location: /?login');
         }
-        /*return json_encode(['connected' => $connected]);*/
-        return $this->render('layouts.default', 'templates.accueil');
+     $connecterJson =  json_encode(['connected' => $connected]);
+        return $this->render('layouts.default', 'templates.accueil', $connected );
     }
 
 
@@ -75,22 +77,23 @@ class Users extends Controller
 
     public function register($newUser): bool|string
     {
-
-
+        $arrayRegister = [];
+        $userCreated = '';
         $newUserId = 0;
 
         //On vérifie si le user n'existe pas déjà en base de données
         $req_user_exists = "SELECT pseudo FROM user WHERE `pseudo`='" . $newUser['pseudo'] . "'";
         $res_user_exists = PdoDb::getInstance()->requete($req_user_exists, 'fetch');
         if (is_array($res_user_exists) && !empty($res_user_exists)) {
-            $userCreated = false;
+            $userCreated = 'false';
         } else {
             $newUserObj = new UsersModel($newUser);
             PdoDb::getInstance()->inserer('user', $newUserObj);
             $newUserId = PdoDb::getInstance()->dernierIndex();
-            $userCreated = true;
+            $userCreated = "true";
         }
-        return $this->render('layouts.default', 'templates.login');
+
+        return $this->render('layouts.default', 'templates.login', $userCreated);
     }
 
 

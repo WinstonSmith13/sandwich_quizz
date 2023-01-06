@@ -1,13 +1,29 @@
 
 <?php $i = 0;
+
 ?>
 <div id="login" class="text-bg-light">
-<div >
-    <div class="row">
+
+
         <div class="col-6 mt-3 mb-3 mx-auto">
             <h1 class="">Veuillez vous connecter pour jouer</h1>
         </div>
-    </div>
+
+    <?php if($data=='true'){?>
+
+        <div class="alert alert-success" role="alert">
+           Vous êtes bien inscrit maintenant connectez-vous.
+        </div>
+    <?php }
+    ?>
+    <?php if($data=='false'){?>
+
+        <div class="alert alert-danger" role="alert">
+            Vous êtes déjà inscrit, connectez-vous.
+        </div>
+    <?php }
+    ?>
+
     <div class="row">
         <div class="col-6 mt-3 mb-3 mx-auto ">
             <div class="card">
@@ -34,15 +50,18 @@
                 <div class="card-footer">
                     Vous n'avez pas de compte : <a href="/?register">S'enregistrer</a>
                 </div>
+
             </div>
         </div>
     </div>
+
 </div>
 
 <section id="container_questions<?= $i; ?>" class="d-none">
 
 </section>
-</div>
+
+
 
 
 

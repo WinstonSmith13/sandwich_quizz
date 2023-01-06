@@ -1,12 +1,12 @@
 <?php $i = 0;
 ?>
 <div id="register" class="text-bg-light">
-<div >
-    <div class="row">
+
+
         <div class="col-6 mt-3 mb-3 mx-auto">
             <h1 class="">Veuillez vous enregistrer</h1>
         </div>
-    </div>
+
     <div class="row">
         <div class="col-6 mt-3 mb-3 mx-auto">
             <div class="card">
@@ -40,7 +40,7 @@
 </section>
 
 
-</div>
 
 
-<script type="module" src="/Js/script_darkMode.js"></script>
+
+
