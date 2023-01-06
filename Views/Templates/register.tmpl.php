@@ -1,10 +1,10 @@
 <?php $i = 0;
 ?>
-
-<div class="container">
+<div id="register" class="text-bg-light">
+<div >
     <div class="row">
         <div class="col-6 mt-3 mb-3 mx-auto">
-            <h1 class="text-black">Veuillez vous enregistrer</h1>
+            <h1 class="">Veuillez vous enregistrer</h1>
         </div>
     </div>
     <div class="row">
@@ -40,6 +40,7 @@
 </section>
 
 
+</div>
 
 
-
+<script type="module" src="/Js/script_darkMode.js"></script>

@@ -1,17 +1,18 @@
 
 <?php $i = 0;
 ?>
-<div class="container">
+<div id="login" class="text-bg-light">
+<div >
     <div class="row">
         <div class="col-6 mt-3 mb-3 mx-auto">
-            <h1 class="text-black">Veuillez vous connecter pour jouer</h1>
+            <h1 class="">Veuillez vous connecter pour jouer</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-6 mt-3 mb-3 mx-auto">
+        <div class="col-6 mt-3 mb-3 mx-auto ">
             <div class="card">
                 <div class="card-body">
-                    <!-- Formulaire traité en Ajax avec Fetch, ne comporte qu'un id. -->
+
                     <form action="/" method="POST" id="loginform" autocomplete="off">
                         <div class="form-group has-validation mb-3">
                             <label for="pseudo" class="form-label">Pseudo :</label>
@@ -39,6 +40,9 @@
 </div>
 
 <section id="container_questions<?= $i; ?>" class="d-none">
+
 </section>
+</div>
+
 
 

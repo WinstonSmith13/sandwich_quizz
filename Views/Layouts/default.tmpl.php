@@ -13,7 +13,7 @@
 
 
 </head>
-<body>
+<body class="text-bg-light">
 <!-- Affichage du Header -->
 <?php
 
@@ -23,9 +23,9 @@ require_once(__DIR__ . '/../../Views/Partials/header.tmpl.php');
 $uriSegments = Outils::getUriSegments();
 ?>
 
-
+<div >
 {pageContent}
-
+</div>
 
 <!-- Affichage du Footer -->
 <?php
@@ -37,6 +37,7 @@ require_once(__DIR__ . '/../../Views/Partials/footer.tmpl.php');
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 <script type="module" src="/Js/script_quizz.js"></script>
+<script type="module" src="/Js/script_darkMode.js"></script>
 
 </body>
 </html>

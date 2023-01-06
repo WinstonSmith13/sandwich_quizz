@@ -21,7 +21,7 @@ switch ($uriSegments[1]) {
 ?>
 
 
-<header class="p-3 text-bg-dark">
+<header class="p-3 text-bg-light">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/?accueil">
@@ -38,7 +38,7 @@ switch ($uriSegments[1]) {
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/?accueil" class="nav-link text-white px-2<?= $activeHome ?>">Accueil</a></li>
+                <li><a href="/?accueil" class="nav-link text-warning px-2<?= $activeHome ?>">Accueil</a></li>
                 <?php
                 if(isset($_SESSION['user'])) {
                     ?>
@@ -46,26 +46,31 @@ switch ($uriSegments[1]) {
                     <?php
                 }
                 ?>
+
             </ul>
 
             <div class="text-end">
                 <?php
                 if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
                     ?>
-                    <a href="/?scoreboard" class="btn btn-outline-light me-2">Tableau des scores</a>
-                    <a href="/?logout" class="btn btn-outline-light me-2">Déconnexion</a>
+                    <a href="/?scoreboard" class="btn btn-outline-warning me-2">Tableau des scores</a>
+                    <a href="/?logout" class="btn btn-outline-warning me-2">Déconnexion</a>
                     <?php
                 } else {
                     ?>
-                    <a href="/?login" class="btn btn-outline-light me-2<?= $activeLogin; ?>">Connexion</a>
+                    <a href="/?login" class="btn btn-outline-warning me-2<?= $activeLogin; ?>">Connexion</a>
                     <?php
                 }
                 ?>
+                <button type="button" id="darkModeBtn" class="darkModeBtn btn btn-warning fw-bold px-2">
+                    DarkMode
+                </button>
 
             </div>
         </div>
     </div>
 </header>
+<hr class="text-warning">
 
 
 
