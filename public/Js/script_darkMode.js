@@ -15,7 +15,8 @@ function dark(){
     header.classList.add("text-bg-dark");
     footer.classList.add("text-bg-dark");
     darkmode.classList.add("text-bg-dark");
-    document.cookie = "darkMode = true; SameSite=None; Secure"
+    document.cookie = "darkMode = false; SameSite=None; Secure"
+
 }
 
 function light(){
@@ -23,25 +24,27 @@ function light(){
     header.classList.remove("text-bg-dark");
     footer.classList.remove("text-bg-dark");
     darkmode.classList.remove("text-bg-dark");
+    document.cookie = "darkMode = true; SameSite=None; Secure"
 
-
-
-    document.cookie = "darkMode = false; SameSite=None; Secure"
 }
 
-if (document.cookie.split(";").some((item) => item.includes("darkMode=true"))) {
+
+if (document.cookie.split(";").some((item) => item.includes("darkMode=false"))) {
     dark();
 } else {
     light();
 }
 
 
+
 darkModeBtn.addEventListener("click", () => {
     if (!body.classList.contains("text-bg-dark")) {
+        darkModeBtn.innerHTML = "<span>Light Mode</span>";
         dark();
-console.log("dark")
-    } else  {
+
+    } else {
+        darkModeBtn.innerHTML = "<span>Dark Mode</span>";
+
         light();
-        console.log("light")
     }
 });

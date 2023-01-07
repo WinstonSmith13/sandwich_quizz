@@ -63,7 +63,7 @@ switch ($uriSegments[1]) {
                 }
                 ?>
                 <button type="button" id="darkModeBtn" class="darkModeBtn btn btn-warning fw-bold px-2">
-                    DarkMode
+                    <span>Dark Mode</span>
                 </button>
 
             </div>
