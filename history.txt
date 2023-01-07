@@ -1,0 +1,49 @@
+2183cb6 Sat Jan 7 15:39:01 2023 +0100 fix: fixing darkmode features error.
+a1435fa Sat Jan 7 14:54:28 2023 +0100 feat: darkmode button.
+25bf2c4 Fri Jan 6 16:02:18 2023 +0100 fix :  fixing loging bug.
+f249310 Fri Jan 6 15:26:05 2023 +0100 feat: register failed features working.
+a294945 Fri Jan 6 12:51:12 2023 +0100 feat: working on the darkmode Js.
+a1f9bd7 Fri Jan 6 01:37:16 2023 +0100 fix: fixing git error.
+0c3f343 Fri Jan 6 01:34:41 2023 +0100 Merge branch 'master' of https://github.com/WinstonSmith13/sandwich_quizz
+51c066a Fri Jan 6 01:34:03 2023 +0100 fix: Fixing git error.
+311e26a Fri Jan 6 01:24:08 2023 +0100 Merge pull request #1 from WinstonSmith13/ECF2
+39933b5 Fri Jan 6 01:06:42 2023 +0100 feat: working on the darkmode.
+b8ca555 Fri Jan 6 00:06:35 2023 +0100 feat: working on the scoreBoard feature.
+9684aab Thu Jan 5 16:55:04 2023 +0100 feat: scoreBoard Display
+922d9b7 Thu Jan 5 15:09:34 2023 +0100 feat: working on the score display.
+cec0088 Thu Jan 5 11:32:33 2023 +0100 feat: working on the score feature.
+efb348d Wed Jan 4 17:08:13 2023 +0100 feat: Auth working.
+136586f Wed Jan 4 16:18:44 2023 +0100  feat: working on the register feature."
+4805b9e Wed Jan 4 11:04:36 2023 +0100 update .gitignore
+2ada983 Wed Jan 4 11:02:35 2023 +0100 Update .gitignore
+847f06c Wed Jan 4 11:01:58 2023 +0100 Update .gitignore
+6d2a4f7 Wed Jan 4 10:59:18 2023 +0100 build: working on git.
+2458098 Sun Oct 16 19:02:58 2022 +0200 readme et log commit.
+5f57618 Thu Oct 13 19:15:01 2022 +0200 Nettoyage finale.
+24c4f74 Thu Oct 13 19:12:08 2022 +0200 Travail sur la partie livrable du projet.
+0566aeb Thu Oct 13 16:38:35 2022 +0200 Update log.txt
+07805ef Thu Oct 13 16:37:33 2022 +0200 Nettoyage pour rendu final.
+c712d3e Thu Oct 13 16:32:49 2022 +0200 Update Router.php
+a7f05f0 Thu Oct 13 16:29:00 2022 +0200 Ajout des commentaires et nettoyage du projet pour le rendu final.
+2461efc Thu Oct 13 10:43:31 2022 +0200 Create ECF_MK_PRESENTATION_131022.key
+cece8ed Thu Oct 13 09:58:30 2022 +0200 Peaufinage du rendu deplacement d'éléments.
+9005a8f Wed Oct 12 23:20:14 2022 +0200 Commit après travail sur le css.
+6c28fcc Wed Oct 12 16:58:13 2022 +0200 Modification du fichier ReadMe et ajouts des fichiers annexes pour la mise en place du projet.
+99c5abd Wed Oct 12 15:32:29 2022 +0200 travail sur le readme et la base de données avec la création du user : Formateur.
+da0819f Wed Oct 12 12:30:34 2022 +0200 commit de mi journée avec travail sur le footer.
+4dc2f31 Wed Oct 12 10:11:22 2022 +0200 modification du  maquettage et de l'affichage du résultat.
+8133f2a Tue Oct 11 17:26:46 2022 +0200 Create README.md
+3bb8898 Tue Oct 11 16:36:59 2022 +0200 nettoyage du dossier
+d9c9acb Tue Oct 11 15:46:30 2022 +0200 Travail sur le front.
+1759eb9 Tue Oct 11 13:51:10 2022 +0200 Fin de travail sur l'algo maintenant plus qu'à travailler le front.
+99146a3 Mon Oct 10 15:04:55 2022 +0200 Commit important avec nettoyage du projet et surtout ajout du Fetch.
+dde31ce Sat Oct 8 15:15:14 2022 +0200 Travail front et cleanage.
+b6781ce Fri Oct 7 17:01:33 2022 +0200 Commit de fin de journée retour à l'idée du formulaire pour recupérer le post.
+d2b5bb0 Fri Oct 7 15:12:19 2022 +0200 Travail toujours le fetch pour acceder au donnes de sql dans js.
+7f1c367 Thu Oct 6 19:19:25 2022 +0200 Fin de journée avec travail sur le fetch.
+60d629b Thu Oct 6 14:13:50 2022 +0200 Mi journée travail sur la page de resultat.
+c39dc2e Thu Oct 6 10:17:35 2022 +0200 Debut de journée ajout de la fonctionnalité changer de question.
+b9a255a Wed Oct 5 17:26:11 2022 +0200 Commit de fin de journée essai de changer les fiches.
+59265c2 Wed Oct 5 13:46:05 2022 +0200 Journée 3 avec le travail sur le Js.
+639734c Tue Oct 4 20:09:12 2022 +0200 Commit de fin de journée avec renommage.
+f4f6afe Tue Oct 4 16:32:40 2022 +0200 Premier commit avec l'ajout du mvcet des questions dans l'affichage.
