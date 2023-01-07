@@ -8,7 +8,7 @@
         <div class="col-6 mt-3 mb-3 mx-auto">
             <h1 class="">Veuillez vous connecter pour jouer</h1>
         </div>
-    
+
     <?php if($data=='true'){?>
 
         <div id="alert-success" class="alert alert-success" role="alert">
@@ -63,7 +63,6 @@
 
 </section>
 
-<script type="module" src="/Js/script_login.js"></script>
 
 
 

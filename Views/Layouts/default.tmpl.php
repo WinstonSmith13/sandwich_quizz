@@ -38,7 +38,7 @@ require_once(__DIR__ . '/../../Views/Partials/footer.tmpl.php');
         crossorigin="anonymous"></script>
 <script type="module" src="/Js/script_quizz.js"></script>
 <script type="module" src="/Js/script_darkMode.js"></script>
-<script type="module" src="/Js/script_login.js"></script>
+
 
 </body>
 </html>
