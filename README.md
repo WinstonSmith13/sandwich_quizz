@@ -1,4 +1,4 @@
-# SandwichQuizz WebApp
+# Sandwich Quizz
 
 Realization of a 'very simple' version of a quiz.
 
@@ -10,13 +10,19 @@ for notes on deploying the project on a live system.
 
 ### Prerequisites
 
-Requirements for the project up and running on your local machine.
+The requirements for getting the project up and running on your local machine are the following:
 
-- Loading database with file: 
-    - "sandwich_quizz2.sql"
-    - Path: /sandwich_quizz/config/sql/sandwich_quizz2.sql
+PHP 7.4 or higher
+MySQL 5.7 or higher
+
+
+## Loading database with file: 
+
+To load the database with the "sandwich_quizz2.sql" file, use the following path: /sandwich_quizz/config/sql/sandwich_quizz2.sql
   
 ### Educational deliverables
+
+Here are the various educational deliverables available:
 
 - Website design :
   - Path:  
@@ -39,8 +45,19 @@ Requirements for the project up and running on your local machine.
 - Pre-filled ECF booklet : 
   - Path:   
     /sandwich_quizz/ressources_pedagogique/zz_Doc/ECF_rempli_MK_121022.docx
-    
+
+## Instructions for use
+
+To use the "Sandwich Quizz" application, follow these steps:
+
+1. Make sure you have all the prerequisites installed on your machine.
+2. Load the database by executing the "sandwich_quizz2.sql" file on your MySQL server.
+3. Configure the database connection settings in the "/sandwich_quizz/config/config.php" file.
+4. Open the application in your browser by accessing the "index.php" file located at the root of the project.
+5. Follow the on-screen instructions to play the quiz.
+
 ## Authors
+
 
 **Medy Krouk** 
 
