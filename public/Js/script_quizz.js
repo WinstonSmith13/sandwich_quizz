@@ -1,7 +1,7 @@
 window.onload = () => {
 
     //Compteur Score.
-    let score;
+    let score = 0;
     //Compteur pour affichage des fiches.
     let i = 0;
     //Compteur pour le compteur de question dans le header de la fiche.
@@ -24,24 +24,16 @@ window.onload = () => {
             }).then(data => {
             //Récupération de la valeur de la table "answer_check" dans la base de donnée (soit 0 ou 1) et ajout dans
             //la variable score.
-
             score =  data ;
-            console.log(score)
-
-
-            //score += data.content;
-
             //Affiche du score à la suite de la réponse.
-            selectionScore.innerHTML = `<div class="score_aff"> ${Math.round(score * 100 / 6)} %</div>`;
-
+            updateScoreDisplay()
         })
-
-
     }
-
+    function updateScoreDisplay() {
+        selectionScore.innerHTML = `<div class="score_aff"> ${Math.round(score * 100 / 6)} %</div>`;
+    }
     //Affichage de la première question.
     selectionQuestion.classList.remove('d-none');
-
 
     //Ajout du dynamisme.
     answerButton.forEach(answer => {
@@ -59,12 +51,6 @@ window.onload = () => {
                 document.querySelector('#container_questions' + i).classList.remove('d-none');
             } else {
                 answer_check(answer.id);
-
-                //Ajout de la class "d-none" pour cacher le header des fiches.
-                /*document.querySelector('#container_questions' + i).classList.add('d-none');
-                document.querySelector('.header_fiche').classList.add('d-none');
-                document.querySelector('.title').classList.add('d-none');
-                document.querySelector('#result').classList.remove('d-none');*/
                 window.location.replace("/?score");
 
             }

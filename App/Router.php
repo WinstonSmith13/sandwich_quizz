@@ -15,7 +15,7 @@ session_start();
 $_GP = array_merge($_POST, $_GET);
 
 
-/*
+
 
 
 /*
@@ -39,9 +39,6 @@ if (count($_GP) > 0) {
 
     if (isset($_SESSION['user']) && isset($_GET['score'])) {
 
-        /*if (isset($_SESSION['score']) && isset($_SESSION['user']['id'])) {
-            $saveScore = new Scores();
-            echo $saveScore->saveScore($_SESSION['user']['id'], $_SESSION['score']);*/
         $affichageScore = new Scores();
         echo $affichageScore->displayListScore();
     }
