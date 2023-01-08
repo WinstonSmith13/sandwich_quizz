@@ -1,16 +1,5 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <title>Accueil - SandwichQuizz</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Css/style.css">
-</head>
-<body>
 <?php $i = 0;
- ?>
+?>
 <form action="/" method="POST">
     <div class="box">
         <div id="result">
@@ -33,13 +22,15 @@
                 <div class="score_text d-flex align-items-center">
                     <!-- Affichage du Score -->
                     <div class="flex-column text-center fw-bold">
-                    <?php $score= ($_SESSION['score']/6); $scorePourcentage = sprintf("%d%%", $score * 100); echo $scorePourcentage; ?>
+                        <?php $score = ($_SESSION['score'] / 6);
+                        $scorePourcentage = sprintf("%d%%", $score * 100);
+                        echo $scorePourcentage; ?>
 
                         <!-- <a href="/?jeu">
                              <button class="restart">Recommencer</button>
                          </a>-->
                         <input type="hidden" name="scoreSave" value="1">
-                        <button type="submit"  class="btn btn-warning fw-bold">
+                        <button type="submit" class="btn btn-warning fw-bold">
                             Enregistrez bien votre score, et recommencez !
                         </button>
                     </div>
@@ -56,5 +47,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-</body>
-</html>

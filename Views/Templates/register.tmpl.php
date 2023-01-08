@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-6 mt-3 mb-3 mx-auto">
-            <div class="card">
+            <div id="registerCard" class="card text-bg-light">
                 <div class="card-body" id="registerZone">
                     <form action="/" method="POST" id="registerform">
                         <div class="form-group has-validation mb-3">

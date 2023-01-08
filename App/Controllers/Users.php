@@ -33,10 +33,6 @@ class Users extends Controller
     {
         $pseudo = $credentials['pseudo'];
         $password = $credentials['password'];
-
-        // On créé une variable de retour pour la méthode login.
-        $connected = '';
-
         // Requete de type SELECT * sur la table utilisateurs,
         // On applique à la clause WHERE la condition d'égalité du courriel et du mot de passe haché MD5.
         $sql = 'SELECT * FROM `user` WHERE `pseudo`="'. $pseudo .'" AND `password`="' .  md5($password) . '"';
@@ -57,7 +53,7 @@ class Users extends Controller
             $connected = 'false';
             header('Location: /?login');
         }
-     $connecterJson =  json_encode(['connected' => $connected]);
+
         return $this->render('layouts.default', 'templates.accueil', $connected );
     }
     /*
@@ -73,13 +69,13 @@ class Users extends Controller
         } else {
             $newUserObj = new UsersModel($newUser);
             PdoDb::getInstance()->inserer('user', $newUserObj);
-
             $userCreated = 'true';
         }
 
         return $this->render('layouts.default', 'templates.login', $userCreated);
     }
-    // Déconnecte l'utilisateur.
+
+
     // Déconnecte l'utilisateur.
     public static function logout()
     {
