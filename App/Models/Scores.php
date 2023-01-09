@@ -14,7 +14,7 @@ class ScoresModel
 
     public function __construct($userId, $scoreFinal) {
         $this-> userId = $userId;
-        $this->scoreFinal = $scoreFinal;
+        $this-> scoreFinal = $scoreFinal;
         return $this;
     }
 }
